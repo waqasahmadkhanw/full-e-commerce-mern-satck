@@ -1,7 +1,7 @@
 import app from "./app.js";
 import DbConnection from "./db/index.js";
-import dotenv, { config } from "dotenv"
-dotenv/config("./.env")
+import dotenv from "dotenv"
+dotenv.config({path:"./.env"})
 DbConnection()
 .then(()=>{
     app.listen(process.env.PORT||6000, () => {
